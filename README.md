@@ -80,3 +80,6 @@ database.once('connected', () => {
 3. Skapa ett **GET-anrop** som hämtar ut en bok baserat på dess ID från databasen. Tips! Använd metoden .findById(*id*) på ditt Book-objekt.
 4. Skapa ett **POST-anrop** som tar emot en bok i **req.body** och som lägger till boken i databasen. Tips! Använd metoden .create(*req.body*) på ditt Book-objekt.
 5. Fortsätt leka runt lite med din databas och testa att använda metoderna .findByIdAndUpdate(), samt .findByIdAndDelete().
+
+## Bonus!
+Läs på om metoderna **.findOne()**, **.findOneAndUpdate()** och **.findOneAndDelete()**. På vilket sätt skiljer de sig från motsvarande metoder ovan? Även metoden **.insertMany()** och **.exists()** kan vara nyttig att känna till.
