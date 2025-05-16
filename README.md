@@ -73,3 +73,10 @@ database.once('connected', () => {
 });
 ```
 6. Starta din igång din utvecklingsserver och kontrollera i terminalen så att allt startar.
+
+## Övning 6: Koda mot din databas
+1. Börja med att skapa ett schema och en modell som du döper till **Book**. [Se film om du är osäker på hur man gör](https://vimeo.com/1084944396/ed8c72e00b?share=copy).
+2. Skapa ett **GET-anrop** som hämtar alla böcker i databasen. Tips! Använd metoden .find() på ditt Book-objekt.
+3. Skapa ett **GET-anrop** som hämtar ut en bok baserat på dess ID från databasen. Tips! Använd metoden .findById(*id*) på ditt Book-objekt.
+4. Skapa ett **POST-anrop** som tar emot en bok i **req.body** och som lägger till boken i databasen. Tips! Använd metoden .create(*req.body*) på ditt Book-objekt.
+5. Fortsätt leka runt lite med din databas och testa att använda metoderna .findByIdAndUpdate(), samt .findByIdAndDelete().
