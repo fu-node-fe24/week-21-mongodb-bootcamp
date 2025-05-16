@@ -54,7 +54,7 @@ Här nämner jag ingen om någon ``.env``-fil, men vill ni använda det iställe
 1. Skapa upp en vanlig expresserver och kör igång den.
 2. Installera **mongoose** genom att köra ``npm i mongoose`` i terminalen, och importera det sedan in i din kod.
 3. Följ setg 1 och 2 i Övning 4, och klicka därefter på **Drivers** i modalen. Kopiera din **Connection String**.
-4. Skapa en connection till MongoDB genom att lägga in följande i din config-del av servern. Glöm inte att skriva in rätt username och password i din **Connection String**.
+4. Skapa en connection till MongoDB genom att lägga in följande i din config-del av servern. Glöm inte att skriva in rätt username och password i din **Connection String**, samt att lägga till namnet på din databas precis innan ``?retryWrites```i strängen.
  ```
  mongoose.connect(<din connection string goes here>);
  const database = mongoose.connection;
