@@ -46,3 +46,30 @@ Nedanstående övningar förutsätter att ni skapat ett konto på MongoDB, alt. 
   "author" : "James Joyce"
 }
 ```
+
+## Övning 5: MongoDB <3 Express
+
+Här nämner jag ingen om någon ``.env``-fil, men vill ni använda det istället för att klistra in din **Connection String** rakt in i koden så kör på!
+
+1. Skapa upp en vanlig expresserver och kör igång den.
+2. Installera **mongoose** genom att köra ``npm i mongoose`` i terminalen, och importera det sedan in i din kod.
+3. Följ setg 1 och 2 i Övning 4, och klicka därefter på **Drivers** i modalen. Kopiera din **Connection String**.
+4. Skapa en connection till MongoDB genom att lägga in följande i din config-del av servern. Glöm inte att skriva in rätt username och password i din **Connection String**.
+   ```
+   mongoose.connect(<din connection string goes here>);
+   const database = mongoose.connection;
+   ```
+5. Felhantera genom att lägga in en emitlyssnare som lyssnar efter fel i databasuppkopplingen. Se nedan:
+  ```
+  database.on('error', (error) => console.log(error));
+  ```
+5. Lägg ävn en emitlyssnare som endast körs EN gång och som lyssnar efter en uppkoppling. När uppkopplingen finns loggar du ut ett meddelande, samt startar din server. Se nedan:
+  ```
+  database.once('connected', () => {
+      console.log('DB Connected');
+      app.listen(PORT, () => {
+          console.log(`Server is running on port ${PORT}`);
+      });
+  });
+  ```
+6. Starta din igång din utvecklingsserver och kontrollera i terminalen så att allt startar.
