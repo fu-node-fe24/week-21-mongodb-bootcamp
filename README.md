@@ -1,6 +1,6 @@
 # Vecka 21: MongoDB Bootcamp
 
-Nedanstående övningar förutsätter att ni gjort allting som gås igenom i filmen [MongoDB : Konfigurering](https://vimeo.com/1084610688/29a61854da?share=copy).
+Nedanstående övningar förutsätter att ni skapat ett konto på MongoDB, alt. loggat in med ert Google-konto.
 
 ## Övning 1: Skapa en collection
 1. Bege dig till dina **Collections** och klicka på knappen **+ Create Database**.
